@@ -3,12 +3,69 @@
   <head>
     <title>Perso</title>
     <%= csrf_meta_tags %>
+    
+    <script src="https://kit.fontawesome.com/b66a0fee7a.js" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
+  <header>
+    <nav class="navbar navbar-expand-md">
+		  <div class="container">
+			  <a class="navbar-brand" href="#">
+			  	<img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571129686/images/logo2_ukgthl.png" class="w-logo" alt="img" style="height: 64px;"> 
+				  <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571129686/images/logo2_ukgthl.png" class="b-logo" alt="img" style="height: 64px;"> 
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="fa fa-bars"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="main-navbar">
+				  <ul class="navbar-nav ml-auto">  
+				      <li class="nav-item">
+					  	<a class="nav-link" href="" data-scroll-nav="1">Home</a>
+				  	  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="2">Mes services</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="3">Mon portfolio</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="4">Qui suis-je ?</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="5">Contact</a>
+					  </li>
+				  </ul>
+			  </div>
+		  </div>
+	  </nav>
+  </header>
+  
   <body>
     <%= yield %>
   </body>
+  
+  <footer>
+    <div class="footer-area text-center footer-padding bg-222">
+      	<div class="container">
+    			  <div class="row">
+    				  <div class="col-md-12 mb-20px">
+    					  <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571129686/images/logo2_ukgthl.png" class="w-logo" alt="img" style="height: 64px;">
+    				  </div>
+    				  <div class="col-md-12">
+    					  <div class="social-icons">
+    						  <a href="https://twitter.com/MaximeBielmann" class="color-bbb radius-50 mr-5px mb-10px color-fff-hvr bg-orange-hvr transition-3" target="_blank"><i class="fab fa-twitter"></i></a>
+    						  <a href="https://www.linkedin.com/in/maximebielmann/" class="color-bbb radius-50 color-fff-hvr bg-orange-hvr transition-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+    					  </div>
+    				  </div>
+    				  <div class="col-md-12">
+    					  <p class="mt-10px mb-0px color-eee">© 2019 Designed by <a href="https://maximebielmann.fr"><strong class="color-orange">Maxime Bielmann</strong></a></p>
+    				  </div>
+    			  </div>
+		  </div>
+    </div>
+  </footer>
+  
 </html>
