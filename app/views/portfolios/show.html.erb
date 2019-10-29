@@ -1,14 +1,42 @@
 <div class="container mt-30px">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
 	           <img src="<%= @portfolio.portfolio_image_link %>" alt="<%= @portfolio.portfolio_image_alt %>">
 	    </div>
-	    <div class="col-6">
-    				<div class="p-15px">
-    					<h5><%= @portfolio.portfolio_title %></h5>
-    	                <p><%= @portfolio.portfolio_desc %></p>
-    	            </div>
-	           </div>   
-	    </div>
+	    <div class="col-4">
+    	    <div class="p-15px">
+    			<h5><%= @portfolio.portfolio_title %></h5>
+    	        <p><%= @portfolio.portfolio_desc %></p>
+    	    </div>
+	   </div>
+	   <div class="col-4">
+	       <%= form_tag "/portfolios/#{@portfolio.id}", method: "patch" do %>
+	           <form>
+                    <div class="form-group">
+                        <div class="form-group">
+                        <label>Catégorie du projet</label>
+                        <select name="portfolio_cat" class="form-control border">
+                           <option value="Vitrine">Vitrine</option>
+                           <option value="Ecommerce">Ecommerce</option>
+                           <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border" value="<%= @portfolio.portfolio_image_link %>" name="portfolio_image_link" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border" value="<%= @portfolio.portfolio_image_alt %>" name="portfolio_image_alt" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border" value="<%= @portfolio.portfolio_title %>" name="portfolio_title" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border" value="<%= @portfolio.portfolio_desc %>" name="portfolio_desc" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Modifier</button>
+                    </div>
+                </form>
+	   <% end %>
+	   </div>
     </div>
 </div>
