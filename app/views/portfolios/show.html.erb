@@ -10,6 +10,7 @@
     	    </div>
 	   </div>
 	   <div class="col-4">
+	       <% if @current_user %>
 	       <%= form_tag "/portfolios/#{@portfolio.id}", method: "patch" do %>
 	           <form>
                     <div class="form-group">
@@ -34,9 +35,16 @@
                         <input type="text" class="form-control border" value="<%= @portfolio.portfolio_desc %>" name="portfolio_desc" />
                     </div>
                     <button type="submit" class="btn btn-primary">Modifier</button>
+            
                     </div>
                 </form>
-	   <% end %>
+	       <% end %>
+                    
+        	       <%= form_tag("/portfolios/#{params[:id]}", method: "delete", class: 'text-center') do %>
+                              <%= submit_tag("Supprimer le projet", class: 'btn btn-primary') %>
+                    <% end %>
+	       
+        <% end %>
 	   </div>
     </div>
 </div>
