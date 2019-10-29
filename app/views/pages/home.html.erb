@@ -80,90 +80,23 @@
                   <!-- grid -->
                   <div class="grid  width-100">
                       <!-- gallery item -->
-                      <div class="col-md-4 items Vitrine mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126848/portfolio/jeanrisacher_jjnidg.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126848/portfolio/jeanrisacher_jjnidg.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Portfolio d'illustrateur</h5>
-                                      <p class="color-777">Site vitrine</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
-					  <div class="col-md-4 items Autre mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/comparateur1_v921w8.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/comparateur1_v921w8.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Comparateur de prix de sneakers</h5>
-                                      <p class="color-777">Autres</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
-					  <div class="col-md-4 items Autre mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/comparateur2_nw3nfm.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/comparateur2_nw3nfm.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Comparateur de prix de sneakers</h5>
-                                      <p class="color-777">Autres</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
-					  <div class="col-md-4 items Ecommerce mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/marketplace1_k7sdrc.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/marketplace1_k7sdrc.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Marketplace de jeunes créateurs</h5>
-                                      <p class="color-777">E-commerces</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
-					  <div class="col-md-4 items Ecommerce mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/marketplace2_twyyxq.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571126847/portfolio/marketplace2_twyyxq.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Marketplace de jeunes créateursr</h5>
-                                      <p class="color-777">E-commerces</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
-					  <div class="col-md-4 items Autre mt-30px">
-                          <div class="work-image p-relative o-hidden">
-                              <img src="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571129349/portfolio/mindsetharmonie_ulpovm.jpg" alt="image">
-                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-								  <a href="https://res.cloudinary.com/hxxt46fe7/image/upload/v1571129349/portfolio/mindsetharmonie_ulpovm.jpg" data-lightbox="image">
-									  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
-								  </a>
-								  <div class="p-15px">
-									  <h5 class="transition-5 color-eee fw-600 mb-0px">Réservation d'atelier bien-être en ligne</h5>
-                                      <p class="color-777">Autres</p>
-                                  </div>
-                              </div>
-                          </div>
-					  </div>
+                      <% @portfolios.each do |portfolio| %>
+                      
+	                      <div class="col-md-4 items <%= portfolio.portfolio_cat %> mt-30px">
+	                          <div class="work-image p-relative o-hidden">
+	                              <img src="<%= portfolio.portfolio_image_link %>" alt="<%= portfolio.portfolio_image_alt %>">
+	                              <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
+									  <a href="<%= portfolio.portfolio_image_link %>" data-lightbox="<%= portfolio.portfolio_image_alt %>">
+										  <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
+									  </a>
+									  <div class="p-15px">
+										  <h5 class="transition-5 color-eee fw-600 mb-0px"><%= portfolio.portfolio_title %></h5>
+	                                      <p class="color-777"><%= portfolio.portfolio_desc %></p>
+	                                  </div>
+	                              </div>
+	                          </div>
+						  </div>
+                      <% end %>
                   </div>
               </div>
           </div>
