@@ -17,6 +17,7 @@
                         <div class="form-group">
                         <label>Catégorie du projet</label>
                         <select name="portfolio_cat" class="form-control border">
+                           <option value="<%= @portfolio.portfolio_cat %>">-- <%= @portfolio.portfolio_cat %> --</option>
                            <option value="Vitrine">Vitrine</option>
                            <option value="Ecommerce">Ecommerce</option>
                            <option value="Autre">Autre</option>
