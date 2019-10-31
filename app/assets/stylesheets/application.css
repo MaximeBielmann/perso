@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.mg-content-top {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
