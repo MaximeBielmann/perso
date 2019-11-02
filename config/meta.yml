@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Développeur Web"
+meta_title: "Maxime Bielmann"
+meta_description: "Je vous accompagne de l'idée jusqu'à la réalisation de votre projet, du cahier des charges à l'utilisation quotidienne de"
+meta_image: "https://res.cloudinary.com/hxxt46fe7/image/upload/v1571131948/images/aboutme_sdeqip.jpg" # should exist in `app/assets/images/`
+twitter_account: "@MaximeBielmann"   # required for Twitter Cards
