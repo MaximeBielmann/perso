@@ -1,6 +1,6 @@
 <% content_for :meta_title, "#{DEFAULT_META["meta_title"]} - #{DEFAULT_META["meta_product_name"]} - #{@portfolio.portfolio_title}" %>
-<%# content_for :meta_description, "#{@portfolio.portfolio_desc}"  %>
-<%# content_for :meta_image, cl_image_path(@portfolio.portfolio_image_link) %>
+<% content_for :meta_description, "#{@portfolio.portfolio_desc}"  %>
+<% content_for :meta_image, @portfolio.portfolio_image_link %>
 
 <div class="container mg-content-top">
     <div class="row">
