@@ -1,0 +1,42 @@
+<% content_for :meta_title, "#{@article.article_title}" %>
+<% content_for :meta_description, "#{@article.article_content.truncate_words(20)}"  %>
+<% content_for :meta_image, @article.article_image_link %>
+
+<section class="welcome-area text-center" data-scroll-index="1">
+		  <div class="overlay-bg-70 flex-center">
+			  <div class="container">
+				  <div class="welcome-text">
+					  <h1 class="color-eee fw-300 mb-20px"><%= @article.article_title %></h1>
+				  </div>
+			  </div>
+		  </div>
+</section>
+
+<section class="blog-details sec-padding">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-8 offset-md-2 mb-25px mt-25px">
+					  <div class="blog-item transition-4">
+						  <img alt="blog" src="<%= @article.article_image_link %>" class="transition-4">
+						  <h5 class="fw-600 mb-10px mt-20px"><%= @article.article_title %></h5>
+						  <p class="mb-10px">
+							  <span class="mr-10px"><i class="fa fa-tag"></i> <%= @article.category.category_title %></span>
+							  <span><i class="fas fa-user"></i> <%= @article.user.name %></span>
+						  </p>
+						  
+						  <div class="mb-20px mt-20px">
+						      <%= @article.article_content %>
+						  </div>
+						  
+						  <p class="fw-600 color-333 mb-10px"><i class="fa fa-tag"></i> tags : 
+							  <a href="#0" class="color-333 color-orange-hvr fw-300"><%= @article.category.category_title %></a> 
+						  </p>	  
+						  <p class="fw-600 color-333 mb-25px"><i class="fa fa-share"></i> Share : 
+							  <a href="#0" class="color-333 color-orange-hvr fw-300 ml-10px"><i class="fab fa-facebook p-5px"></i> </a> 
+							  <a href="#0" class="color-333 color-orange-hvr fw-300"><i class="fab fa-twitter p-5px"></i> </a> 
+						  </p>
+					  </div>
+				  </div>  
+			  </div>
+		  </div>
+	  </section>
