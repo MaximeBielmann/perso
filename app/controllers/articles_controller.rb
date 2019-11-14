@@ -14,7 +14,15 @@ class ArticlesController < ApplicationController
 
   def update
   end
+  
+  def change
+    @article = Article.find(params[:id])
+    @users = User.all
+    @categories = Category.all
+  end
 
   def delete
+    Article.find(params[:id]).destroy
+    redirect_to '/blog'
   end
 end

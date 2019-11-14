@@ -1,5 +1,5 @@
 <% content_for :meta_title, "#{@article.article_title}" %>
-<% content_for :meta_description, "#{@article.article_content.truncate_words(20)}"  %>
+<% content_for :meta_description, "#{@article.article_content.truncate(170)}"  %>
 <% content_for :meta_image, @article.article_image_link %>
 
 <section class="welcome-area text-center" data-scroll-index="1">

@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def home
-    
     @users = User.all
     @categories = Category.all
     @articles = Article.all
