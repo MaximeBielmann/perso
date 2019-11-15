@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_02_202201) do
+ActiveRecord::Schema.define(version: 2019_11_14_175240) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "category_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_11_02_202201) do
     t.string "article_title"
     t.text "article_content"
     t.string "article_image_link"
+    t.string "article_meta_desc"
   end
 
   create_table "categories", force: :cascade do |t|

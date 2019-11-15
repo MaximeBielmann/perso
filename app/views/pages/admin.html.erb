@@ -70,6 +70,9 @@
                         <input type="text" class="form-control border" placeholder="Titre de l'article" name="article_title" />
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control border" placeholder="Meta desc de l'article" name="article_meta_desc" />
+                    </div>
+                    <div class="form-group">
                         <textarea class="form-control border" name="article_content" rows="8"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Envoyer</button>
@@ -77,9 +80,9 @@
             <% end %>
         </div>
         <div class="col-md-6">
-            <h2>Liste des projets</h2>
-            <% @portfolios.each do |portfolio| %>
-            <p><a href="/portfolios/<%= portfolio.id %>"><%= portfolio.portfolio_title %></a></p>
+            <h2>Liste des articles</h2>
+            <% @articles.each do |article| %>
+            <p><a href="/articles/<%= article.id %>"><%= article.article_title %></a></p>
             <% end %>
         </div>
     </div>
