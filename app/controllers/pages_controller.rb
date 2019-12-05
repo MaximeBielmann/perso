@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
   def home
     @users = User.all
-    @categories = Category.all
-    @articles = Article.all
     @portfolios = Portfolio.all
   end
   
@@ -12,8 +10,6 @@ class PagesController < ApplicationController
     end
      
     @users = User.all
-    @categories = Category.all
-    @articles = Article.all
     @portfolios = Portfolio.all
   end
 end
